@@ -126,11 +126,33 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
         }
       }
     }
+  RemplirVisaSubType();
+  
+async function RemplirMission() {
+      var MissionElement;
+      var isVisibleMission;
+      for (var i = 1; i < 10; i++) {
+        locationElement = document.querySelector(
+          '[aria-owns="Mission' + i + '_listbox"]'
+        );
+        if (locationElement !== null) {
+          isVisibleMission = MissionElement.offsetParent !== null;
 
+          if (isVisibleMission) {
+            console.log("Mission " + i + " is visible");
+            var Location = $("#Mission" + i).data("kendoDropDownList");
+            Location.select(1); // 1 corresponds to 'Consulate Casablanca'
+            Location.trigger("change");
+          } else {
+            // console.log("Element " + i + " is not visible");
+          }
+        }
+      }
+    }
     function handleOkButtonClick() {
       isOkButtonClicked = true;
 
-      RemplirVisaSubType();
+      
     }
 
     $('button[data-bs-dismiss="modal"]').on("click", handleOkButtonClick);
@@ -138,6 +160,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
     RemplirCategoryId();
     RemplirLocation();
     RemplirVisaType();
+    RemplirMission();
 
         //--------------------//
     var OnVerifyCaptcha;
