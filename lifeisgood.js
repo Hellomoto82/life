@@ -126,7 +126,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
         }
       }
     }
-  RemplirVisaSubType();
+ 
   
 async function RemplirMission() {
       var MissionElement;
@@ -151,7 +151,7 @@ async function RemplirMission() {
     }
     function handleOkButtonClick() {
       isOkButtonClicked = true;
-
+ RemplirVisaSubType();
       
     }
 
