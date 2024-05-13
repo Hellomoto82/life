@@ -313,6 +313,7 @@ async function RemplirMission() {
         var Mission = $("#Mission" + i).data("kendoDropDownList");
         Mission.select(1); // 1 corresponds to 'Casablanca'
         Mission.trigger("change");
+
       } else {
         // console.log("Element " + i + " is not visible");
           }
