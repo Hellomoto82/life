@@ -131,17 +131,17 @@ async function RemplirMission() {
       var MissionElement;
       var isVisibleMission;
       for (var i = 1; i < 10; i++) {
-        locationElement = document.querySelector(
+        MissionElement = document.querySelector(
           '[aria-owns="Mission' + i + '_listbox"]'
         );
-        if (locationElement !== null) {
+        if (MissionElement !== null) {
           isVisibleMission = MissionElement.offsetParent !== null;
 
           if (isVisibleMission) {
             console.log("Mission " + i + " is visible");
-            var Location = $("#Mission" + i).data("kendoDropDownList");
-            Location.select(1); // 1 corresponds to 'Consulate Casablanca'
-            Location.trigger("change");
+            var Mission = $("#Mission" + i).data("kendoDropDownList");
+            Mission.select(1); // 1 corresponds to 'Consulate Casablanca'
+            Mission.trigger("change");
           } else {
             // console.log("Element " + i + " is not visible");
           }
@@ -150,7 +150,8 @@ async function RemplirMission() {
     }
     function handleOkButtonClick() {
       isOkButtonClicked = true;
- 
+  RemplirVisaSubType();
+    RemplirMission();
       
     }
 
@@ -159,8 +160,7 @@ async function RemplirMission() {
     RemplirCategoryId();
     RemplirLocation();
     RemplirVisaType();
-    RemplirVisaSubType();
-    RemplirMission();
+  
 
         //--------------------//
     var OnVerifyCaptcha;
