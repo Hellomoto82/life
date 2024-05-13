@@ -299,22 +299,22 @@ const CasaregrPremiumButton = createButton("Casa Regroupement Premium", function
     }
   
 async function RemplirMission() {
-      var MissionElement;
-      var isVisibleMission;
-      for (var i = 1; i < 10; i++) {
-        MissionElement = document.querySelector(
-          '[aria-owns="Mission' + i + '_listbox"]'
-        );
-        if (MissionElement !== null) {
-          isVisibleMission = MissionElement.offsetParent !== null;
+  var MissionElement;
+  var isVisibleMission;
+  for (var i = 1; i < 10; i++) {
+    MissionElement = document.querySelector(
+      '[aria-owns="Mission' + i + '_listbox"]'
+    );
+    if (MissionElement !== null) {
+      isVisibleMission = MissionElement.offsetParent !== null;
 
-          if (isVisibleMission) {
-            console.log("Mission " + i + " is visible");
-            var Location = $("#Mission" + i).data("kendoDropDownList");
-            Mission.select(1); // 1 corresponds to 'Casablanca'
-            Mission.trigger("change");
-          } else {
-            // console.log("Element " + i + " is not visible");
+      if (isVisibleMission) {
+        console.log("Mission " + i + " is visible");
+        var Mission = $("#Mission" + i).data("kendoDropDownList");
+        Mission.select(1); // 1 corresponds to 'Casablanca'
+        Mission.trigger("change");
+      } else {
+        // console.log("Element " + i + " is not visible");
           }
         }
       }
