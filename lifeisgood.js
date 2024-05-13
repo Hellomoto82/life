@@ -297,6 +297,7 @@ const CasaregrPremiumButton = createButton("Casa Regroupement Premium", function
         }
       }
     }
+  
 async function RemplirMission() {
       var MissionElement;
       var isVisibleMission;
@@ -318,10 +319,12 @@ async function RemplirMission() {
         }
       }
     }
+  
     function handleOkButtonClick() {
       isOkButtonClicked = true;
 
       RemplirVisaSubType();
+      RemplirMission();
     }
 
     $('button[data-bs-dismiss="modal"]').on("click", handleOkButtonClick);
@@ -329,7 +332,6 @@ async function RemplirMission() {
     RemplirCategoryId();
     RemplirLocation();
     RemplirVisaType();
-    RemplirMission();
 
         //--------------------//
     var OnVerifyCaptcha;
