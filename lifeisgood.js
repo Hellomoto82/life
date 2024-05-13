@@ -126,8 +126,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
         }
       }
     }
- 
-  
+  RemplirVisaSubType();
 async function RemplirMission() {
       var MissionElement;
       var isVisibleMission;
@@ -151,7 +150,7 @@ async function RemplirMission() {
     }
     function handleOkButtonClick() {
       isOkButtonClicked = true;
- RemplirVisaSubType();
+ RemplirMission();
       
     }
 
@@ -160,7 +159,7 @@ async function RemplirMission() {
     RemplirCategoryId();
     RemplirLocation();
     RemplirVisaType();
-    RemplirMission();
+    
 
         //--------------------//
     var OnVerifyCaptcha;
