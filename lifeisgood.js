@@ -24,7 +24,7 @@ if (window.location.href.startsWith(vtvUrlPrefix)) {
   // دالة لإضافة الأزرار إلى الصفحة
 
   // إنشاء الأزرار
-  const CasaregrNormalButton = createButton("Casa Regroupement Normal", function() {
+  const CasaregrNormalButton = createButton("Casa Regroup Normal", function() {
 (function () {
     "use strict";
 
@@ -197,7 +197,7 @@ async function RemplirMission() {
 })();
     console.log("تم تنفيذ الشيفرة لزر Casa Regroupement Normal بنجاح!");
   });
-const CasaregrPremiumButton = createButton("Casa Regroupement Premium", function() {
+const CasaregrPremiumButton = createButton("Casa Regroup Premium", function() {
 (function () {
     "use strict";
 
